@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MoyenneApp</string>
+    <string name="univeristy_name">Tekup</string>
+
+
+
+
+
+    <string name="success">Félicitations, vous avez réussi
+        avec une moyenne de %1$f</string>
+
+
+</resources>
