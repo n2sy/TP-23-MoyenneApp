@@ -6,8 +6,15 @@
 
 
 
-    <string name="success">Félicitations, vous avez réussi
-        avec une moyenne de %1$f</string>
+
+
+
+
+
+
+    <string name="success"> Félicitations, votre moyenne est de %1$f</string>
+    <string name="fail">Navré, vous n\'avez pas réussi et votre moyenne est de %1$f</string>
+
 
 
 </resources>

@@ -16,42 +16,26 @@ public class FailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_success);
+        setContentView(R.layout.activity_fail);
         //btn_back = (Button) findViewById(R.id.Back);
+
 
         tv = (TextView) findViewById(R.id.resultatReuMoy);
         Intent j = getIntent();
 
         float m = j.getFloatExtra("moyenne", 0);
-
-        String msg = "Félicitations, vous avez réussi avec une moyenne de " +  m;
-
+        msg = getString(R.string.fail, m);
         tv.setText(msg);
 
 
     }
 
-    public void RetournerHome(View v)
-    {
-        Intent i = new Intent (this, MainActivity.class);
-        //i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        startActivity(i);
 
-    }
-
-    public void SendSMS(View v)
-    {
-        Intent i1 = new Intent();
-        i1.setAction(Intent.ACTION_DIAL);
-        i1.setData(Uri.parse("tel://12312312"));
-
-
+    public void SendSMS(View v) {
         Intent i = new Intent();
         i.setAction(Intent.ACTION_SENDTO);
         Uri uri = Uri.parse("smsto:98123456");
         i.setData(uri);
-
-
         i.putExtra("sms_body", msg);
         startActivity(i);
     }

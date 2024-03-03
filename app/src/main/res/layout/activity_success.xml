@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_moyenne2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/artifices"
+    android:background="#FFFFFF"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -13,44 +14,64 @@
 
     <TextView
         android:id="@+id/resultatReuMoy"
-        android:layout_width="259dp"
-        android:layout_height="274dp"
-        android:layout_alignTop="@id/Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="207dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginRight="71dp"
-        android:layout_marginBottom="90dp"
-        android:background="#1AC6D2DD"
-        android:text="TextView"
-        android:textColor="#84D4DC"
-        android:textSize="22sp"
-        android:textStyle="bold|italic" />
-
-    <Button
-        android:id="@+id/Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
-        android:onClick="RetournerHome"
-        android:text="Home" />
+        android:background="#1AC6D2DD"
+        android:justificationMode="none"
+        android:textAlignment="center"
+        android:textColor="#020809"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/buttonSend"
-        android:layout_width="195dp"
-        android:layout_height="wrap_content"
+        android:layout_width="158dp"
+        android:layout_height="45dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="259dp"
-        android:layout_toEndOf="@+id/Back"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="60dp"
+        android:background="#4CAF50"
         android:onClick="SendSMS"
-        android:text="Envoyer par SMS" />
-</RelativeLayout>
+        android:text="Envoyer par SMS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/numtel"
+        android:layout_width="127dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/bordertelsuccess"
+        android:ems="10"
+        android:hint="N° Tel"
+        android:textAlignment="center"
+        android:inputType="phone"
+        android:textColorHint="#4CAF50"
+        android:textColor="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSend"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="393dp"
+        android:layout_height="442dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/success" />
+</androidx.constraintlayout.widget.ConstraintLayout>

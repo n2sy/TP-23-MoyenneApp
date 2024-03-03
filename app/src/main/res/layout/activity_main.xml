@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -7,44 +8,156 @@
     android:background="@color/Nidhal"
     tools:context="com.tp2.moyenneapp.MainActivity">
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="207dp"
+        android:layout_height="54dp"
+        android:fontFamily="cursive"
+        android:text="Moyenne App"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="Matière"
+        android:textColor="#F1EBEB"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/note1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:text="Coefficients"
+        android:textColor="#F1EBEB"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.796" />
 
     <EditText
         android:id="@+id/note1"
-        android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/background_light"
-        android:hint="1ème note"
-        android:inputType="numberDecimal" />
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="204dp"
+        android:background="@drawable/border"
+        android:hint="Note 1"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        android:textColorHint="#6571B3"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="92dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="204dp"
+        android:text="3"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:background="@drawable/bordercoeff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.685"
+        app:layout_constraintStart_toEndOf="@+id/note1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/note2"
-        android:layout_width="wrap_content"
-        android:layout_height="39dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/holo_blue_bright"
-        android:ems="10"
-        android:hint="2ème note"
-        android:inputType="numberDecimal" />
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border"
+        android:hint="Note 2"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        android:textColorHint="#6571B3"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="92dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="2"
+        android:background="@drawable/bordercoeff"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toEndOf="@+id/note2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/note3"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="65dp"
-        android:background="@android:color/holo_orange_light"
-        android:hint="3ème note"
-        android:inputType="numberDecimal" />
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border"
+        android:hint="Note 3"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        android:textColorHint="#6571B3"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="92dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:text="3"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:background="@drawable/bordercoeff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.629"
+        app:layout_constraintStart_toEndOf="@+id/note3"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/bcalcul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#268C2A"
+        android:layout_width="257dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="52dp"
+        android:background="@android:color/background_light"
+        android:fontFamily="sans-serif-smallcaps"
         android:onClick="calculerMoyenne"
-        android:text="Calculer" />
-
-</TableLayout>
+        android:text="Calculer"
+        android:textColor="#3F51B5"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
