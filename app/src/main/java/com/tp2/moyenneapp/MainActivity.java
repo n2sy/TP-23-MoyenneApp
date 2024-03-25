@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -42,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
         String ch1 = val1.getText().toString();
         String ch2 = val2.getText().toString();
         String ch3 = val3.getText().toString();
-
-
 
         if (ch1 == "" || ch2.equals("") || ch3.isEmpty()) {
             AlertDialog alertDialog = new AlertDialog.Builder(this).create();
