@@ -43,10 +43,10 @@ public class SuccessActivity extends AppCompatActivity {
  
 
     public void SendSMS(View v) {
-        Intent i1 = new Intent();
-        i1.setAction(Intent.ACTION_DIAL);
-        i1.setData(Uri.parse("tel://12312312"));
-        startActivity(i1);
+//        Intent i1 = new Intent();
+//        i1.setAction(Intent.ACTION_DIAL);
+//        i1.setData(Uri.parse("tel://12312312"));
+//        startActivity(i1);
 
         Intent i = new Intent();
         i.setAction(Intent.ACTION_SENDTO);
